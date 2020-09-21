@@ -2,7 +2,6 @@ a = input('Введи строку: ')
 mas = []
 for i in a:
     mas.append(ord(i))
-print(mas)
 
 k = int(input('Введи шаг: '))
 new_mas = []
@@ -19,7 +18,6 @@ for i in mas:
         new_mas.append(i)
     else:
         new_mas.append(i)
-print(new_mas)
 
 s = str()
 for i in new_mas:
