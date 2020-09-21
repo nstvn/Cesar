@@ -1,10 +1,10 @@
-a = str()
+a = input('Введи строку: ')
 mas = []
 for i in a:
     mas.append(ord(i))
 print(mas)
 
-k = int()
+k = 3
 new_mas = []
 for i in mas:
     if i >= 1040 and i <= 1071:
@@ -19,7 +19,10 @@ for i in mas:
         new_mas.append(i)
     else:
         new_mas.append(i)
+print(new_mas)
 
 s = str()
 for i in new_mas:
     s += chr(i)
+
+print(s)
