@@ -4,7 +4,7 @@ for i in a:
     mas.append(ord(i))
 print(mas)
 
-k = 3
+k = int(input('Введи шаг: '))
 new_mas = []
 for i in mas:
     if i >= 1040 and i <= 1071:
