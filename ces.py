@@ -1,15 +1,24 @@
+import logging
+
+logging.basicConfig(format=u'%(levelname)-8s [%(asctime)s] %(message)s', level=logging.DEBUG, filename=u'log.log')
+
+logging.info(u'Программа запущена')
 a = input('Введи строку: ')
 mas = []
 for i in a:  # Возвращение числового представления каждого символа строки
     mas.append(ord(i))
+logging.info(u'Ввод строки, создание массива, заполнение массива числовыми представлениями символов')
 
 k = ''
 while type(k) != int():  # Цикл для проверки на ввод числа
     try:  # Проверка на ввод числа
         k = int(input('Введи шаг: '))
+        logging.debug(u'Проверка ключа на тип данных прошла успешно')
         break
     except ValueError:
         print('Вы ввели не число')
+        logging.debug(u'Пользователь ввел не число')
+logging.info(u'Ввод ключа в числовом виде и его проверка')
 
 new_mas = []
 for i in mas:  # Работа с числовыми представлениями строки
@@ -35,9 +44,12 @@ for i in mas:  # Работа с числовыми представлениям
         new_mas.append(i)
     else:  # Пропуск специальных символов и чисел
         new_mas.append(i)
+logging.info(u'Символы зашифрованы')
 
 s = str()
 for i in new_mas:  # Возвращение символа для каждого числового представления
     s += chr(i)
-
+logging.info(u'Получение символов из числового представления')
 print(s)  # Вывод зашифрованного текста
+logging.info(u'Выведена зашифрованная строка на консоль')
+logging.info(u'Программа завершена успешно')
